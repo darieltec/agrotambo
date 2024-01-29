@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cotización</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../estilos.css">
+        <!-- JavaScript -->
+        <script type="text/javascript" src="../menu.js"></script>
+
+        <!-- Load icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript">
+            function proceso(){
+                //entrada
+                var precio = parseFloat(frmCotizacion.txtPrecio.value);//decimal
+                var cantidad = parseInt(frmCotizacion.txtCantidad.value);//entero
+                //proceso
+                var importe = precio * cantidad;
+                if(cantidad >= 12){
+                    var descuento = importe * 0.20;
+                    frmCotizacion.txtDescuento.value = descuento+'  Soles'+' (Usted recibirá un Dcto. del 20%)';
+                }else if(cantidad >= 6 && cantidad < 12){
+                    var descuento = importe * 0.15;
+                    frmCotizacion.txtDescuento.value = descuento+'  Soles'+' (Usted recibirá un Dcto. del 15%)';
+                }else{
+                    var descuento = importe * 0.10;
+                    frmCotizacion.txtDescuento.value = descuento+'  Soles'+' (Usted recibirá un Dcto. del 10%)';
+                }
+                var pago = importe - descuento;
+                if(cantidad >= 1){
+                    var obsequio = 1 * cantidad;
+                }else{
+                    var obsequio = 0;
+                }
+                //salida
+                frmCotizacion.txtCotizacion.value = importe+'  Soles';
+                frmCotizacion.txtPago.value = pago+'  Soles';
+                frmCotizacion.txtObsequio.value = 'Usted recibirá como obsequio  '+obsequio+'  Gorros'
+            }
+            function precios(){
+                var p = frmCotizacion.cboProducto.selectedIndex;
+                if(p === 0){frmCotizacion.txtPrecio.value = 300;}
+                if(p === 1){frmCotizacion.txtPrecio.value = 450;}
+                if(p === 2){frmCotizacion.txtPrecio.value = 650;}
+                if(p === 3){frmCotizacion.txtPrecio.value = 800;}
+                if(p === 4){frmCotizacion.txtPrecio.value = 650;}
+                if(p === 5){frmCotizacion.txtPrecio.value = 400;}
+                if(p === 6){frmCotizacion.txtPrecio.value = 650;}
+                if(p === 7){frmCotizacion.txtPrecio.value = 700;}
+                if(p === 8){frmCotizacion.txtPrecio.value = 120;}
+                if(p === 9){frmCotizacion.txtPrecio.value = 400;}
+                if(p === 10){frmCotizacion.txtPrecio.value = 550;}
+                if(p === 11){frmCotizacion.txtPrecio.value = 200;}
+                if(p === 12){frmCotizacion.txtPrecio.value = 400;}
+                if(p === 13){frmCotizacion.txtPrecio.value = 500;}
+                if(p === 14){frmCotizacion.txtPrecio.value = 700;}
+                if(p === 15){frmCotizacion.txtPrecio.value = 820;}
+                if(p === 16){frmCotizacion.txtPrecio.value = 400;}
+                if(p === 17){frmCotizacion.txtPrecio.value = 460;}
+            }
+        </script>
+    
+    </head>
+    <body>
+        <div class="menu" id="mimenu">
+            <a href="../index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="productos.html">Productos</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="novedades.html">Novedades</a>
+            <a href="cotizacion.html" class="active">Cotización</a>
+            <a href="clientes.html">Clientes</a>
+            <a href="contactenos.html">Contáctenos</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div><br>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8"></div>
+                <div class="col-md-4">
+                    <form class="example" action="action_page.php">
+                        <input type="text" placeholder="Buscar..." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div><br>
+
+        <hr size="5" color="red">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="text-success" align="center"><b>Solicite su Cotización</b></h1><br>
+                    <form name="frmCotizacion">
+                        <div class="form-group">
+                            <label for="fechaCotizacion">Fecha de Cotización:</label>
+                            <input type="date" class="form-control" id="fechaCotizacion" placeholder="Fecha de Cotización" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="producto">Seleccione el Producto:</label>
+                            <select name="cboProducto" class="form-control" onchange="precios()">
+                                <option selected>Producto a Cotizar</option>
+                                <option value="malla50">Malla Raschel 50%</option>
+                                <option value="malla65">Malla Raschel 65%</option>
+                                <option value="malla80">Malla Raschel 80%</option>
+                                <option value="malla90">Malla Raschel 90%</option>
+                                <option value="mulching">Mulching</option>
+                                <option value="geomembrana">Geomembrana</option>
+                                <option value="cinta5">Cinta de Riego clase 5 mil</option>
+                                <option value="cinta8">Cinta de Riego clase 8 mil</option>
+                                <option value="bandeja">Bandejas de Almácigo</option>
+                                <option value="filtro2">Filtro de Agua de 2"</option>
+                                <option value="filtro3">Filtro de Agua de 3"</option>
+                                <option value="venturi">Venturi</option>
+                                <option value="ground">Ground Cover</option>
+                                <option value="mallarpi">Malla Arpillera</option>
+                                <option value="bomba">Bomba de Agua</option>
+                                <option value="film">Film para Invernadero 6x50</option>
+                                <option value="layflat">Manga Lay Flat</option>
+                                <option value="manguera2">Manguera HDPE 2"</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="precio">Visualice el Precio x Unidad:</label>
+                            <input type="text" name="txtPrecio" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="cantidad">Ingrese la cantidad:</label>
+                            <input type="text" name="txtCantidad" class="form-control">
+                        </div><br>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input type="button" value="Procesar Cotización" class="btn btn-primary" onclick="proceso()">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="button" value="Imprimir >>" class="btn btn-dark" onclick="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group"><br>
+                            <label for="cotizacion">Importe de la Cotización:</label>
+                            <input type="text" name="txtCotizacion" class="form-control">
+                        </div>                
+                        <div class="form-group">
+                            <label for="descuento">Descuento:</label>
+                            <input type="text" name="txtDescuento" class="form-control">
+                        </div>                
+                        <div class="form-group">
+                            <label for="pago">Importe a Pagar:</label>
+                            <input type="text" name="txtPago" class="form-control">
+                        </div> 
+                        <div class="form-group">
+                            <label for="obsequio">Usted Recibirá como Obsequio:</label>
+                            <input type="text" name="txtObsequio" class="form-control" readonly>
+                        </div>               
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-success" align="center"><b>Promoción Imperdible</b></h3><br>
+                    <ul>
+                        <li>Por compras mayores o iguales a <b class="text-danger">doce</b> unidades adquiera un descuentos del <b class="text-danger">20%</b> y <b class="text-success">un Gorro de Obsequio</b> por cada unidad de cualquier Producto.</li>
+                        <li>Por compras mayores o iguales a <b class="text-danger">cinco</b> unidades adquiera un descuentos del <b class="text-danger">15%</b> y <b class="text-success">un Gorro de Obsequio</b> por cada unidad de cualquier Producto.</li>
+                        <li>Por compras menores o iguales a <b class="text-danger">cuatro</b> unidades adquiera un descuentos del <b class="text-danger">10%</b> y <b class="text-success">un Gorro de Obsequio</b> por cada unidad de cualquier Producto.</li>
+                    </ul>
+                    <center><img class="img-fluid" src="../recursos/cotizacionacceso.jpg" frameborder="1" style="border:5px double blueviolet;"></center>
+                </div>
+            </div>
+        </div><br>  
+
+        <img src="../recursos/imagenfooter.jpg" width="100%" alt="Piepagina">
+        
+        <div class="container"><br>
+            <footer>
+                <p>&copy; <script type="text/javascript">DateTime.Now.Year</script> - Gestión Logística AT</p>
+            </footer>
+        </div>
+    </body>
+</html>

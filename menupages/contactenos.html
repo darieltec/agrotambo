@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contáctenos</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../estilos.css">
+        <!-- JavaScript -->
+        <script type="text/javascript" src="../menu.js"></script>
+
+        <!-- Load icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+        <div class="menu" id="mimenu">
+            <a href="../index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="productos.html">Productos</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="novedades.html">Novedades</a>
+            <a href="cotizacion.html">Cotización</a>
+            <a href="clientes.html">Clientes</a>
+            <a href="contactenos.html" class="active">Contáctenos</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div><br>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8"></div>
+                <div class="col-md-4">
+                    <form class="example" action="action_page.php">
+                        <input type="text" placeholder="Buscar..." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div><br>
+        
+        <hr size="5" color="black">
+
+        <h1 class="titulo">Contáctenos</h1><br>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="txtUsuario" placeholder="Escriba su nombre aquí..." required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="txtCorreo" placeholder="Escriba su correo aquí..." required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="txtCelular" placeholder="Escriba su celular aquí..." required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="txtEmpresa" placeholder="Escriba el nombre de la Empresa aquí...">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="txtDni" placeholder="Escriba su DNI o RUC aquí..." required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="txtCiudad" placeholder="Escriba su Ciudad aquí..." required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="txtComentario" style="height:120px" placeholder="Escriba su comentario aquí..."></textarea>
+                        </div>
+                        <input type="submit" value="Enviar Datos -->" class="btn btn-danger btn-block"><br> <!-- btn-block: agranda el botón al tamaño del contenedor-->
+                    </form>
+                </div> 
+                <div class="col-md-6">
+                    <p>Galeria COMPUPLAZA - Av Inca Garcilaso de la Vega 1251, Cercado de Lima 15001</p>
+                    <iframe class="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.8311254275095!2d-77.03993258592843!3d-12.055137691461674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8c66039e27f%3A0xf87b9752d3eeb99c!2sGaleria%20COMPUPLAZA!5e0!3m2!1ses-419!2spe!4v1593465249966!5m2!1ses-419!2spe" width="450" height="400" frameborder="1" style="border:5px double green;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div> 
+            </div>
+        </div><br>
+
+        <img src="../recursos/imagenfooter.jpg" width="100%" alt="Piepagina">
+
+        <div class="container"><br>
+            <footer>
+                <p>&copy; <script type="text/javascript">DateTime.Now.Year</script> - Gestión Logística AT</p>
+            </footer>
+        </div>
+    </body>
+</html>

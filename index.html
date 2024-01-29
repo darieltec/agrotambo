@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AgroTambo</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="estilos.css">
+        <!-- JavaScript -->
+        <script type="text/javascript" src="menu.js"></script>
+
+        <!-- Load icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+        <div class="menu" id="mimenu">
+            <a href="index.html" class="active">Inicio</a>
+            <a href="menupages/nosotros.html">Nosotros</a>
+            <a href="menupages/productos.html">Productos</a>
+            <a href="menupages/servicios.html">Servicios</a>
+            <a href="menupages/novedades.html">Novedades</a>
+            <a href="menupages/cotizacion.html">Cotización</a>
+            <a href="menupages/clientes.html">Clientes</a>
+            <a href="menupages/contactenos.html">Contáctenos</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div><br>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8"></div>
+                <div class="col-md-4">
+                    <form class="example" action="action_page.php">
+                        <input type="text" placeholder="Buscar..." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div><br>
+        
+        <!--<h1>Inicio</h1>-->
+        <div class="container">
+            <div id="demo" class="carousel slide" data-ride="carousel" data-interval="1500" data-pause="hover" data-keyboard="true" data-wrap="true">
+            
+            <!-- Indicadores -->
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>
+                        <li data-target="#demo" data-slide-to="3"></li>
+                        <li data-target="#demo" data-slide-to="5"></li>
+                    </ul>
+        
+            <!-- Presentación de diapositivas -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="recursos/indexslide1.jpg" alt="Bienvenidos">
+                        <div class="carousel-caption">
+                            <h1 style="font-size:4vw;"><b>Invernaderos</b></h1>
+                            <h2 style="font-size:3vw;"><b></b>Producción bajo tu control</b></h2>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="recursos/indexslide2.jpg" alt="Welcome">
+                        <div class="carousel-caption">
+                            <h1 style="font-size:4vw;"><b>Plagas</b></h1>
+                            <h2 style="font-size:3vw;"><b>Control efectivo y rápido</b></h2>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="recursos/indexslide3.jpg" alt="Ambientes">
+                        <div class="carousel-caption">
+                            <h1 style="font-size:4vw;"><b>Control de Plagas</b></h1>
+                            <h2 style="font-size:3vw;"><b>Aplica la tecnología</b></h2>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="recursos/indexslide4.jpg" alt="Moderno">
+                        <div class="carousel-caption">
+                            <h1 style="font-size:4vw;"><b>Jardinería</b></h1>
+                            <h2 style="font-size:3vw;"><b>Todo lo que necesitas</b></h2>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="recursos/indexslide5.jpg" alt="Moderno">
+                        <div class="carousel-caption">
+                            <h1 style="font-size:4vw;"><b>Medición</b></h1>
+                            <h2 style="font-size:3vw;"><b>Los mejores instrumentos para medir</b></h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles izq. y derecho -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+    
+        <hr size="5" color="blue">
+
+        <div class="container">
+            <div class="row">        
+                <div class="col-md-4">
+                    <a href="menupages/nosotros.html"><center><img class="img-fluid" src="recursos/nosotrosacceso.jpg" frameborder="1" style="border:5px double red;"></center></a>                       
+                    <a href="menupages/nosotros.html"><center><h2><b>Nosotros</b></h2></center></a>
+                    <p><center>
+                        Somos un equipo de profesionales dedicados exclusivamente a ayudarte a implementar el proyecto agrícola que tienes en mente.
+                    </center></p>
+                    <p>
+                        <center><a class="btn btn-success" href="menupages/nosotros.html">Leer más...</a></center>
+                    </p>
+                </div>       
+                <div class="col-md-4">
+                    <a href="menupages/productos.html"><center><img class="img-fluid" src="recursos/productosacceso.jpg" frameborder="1" style="border:5px double blue;"></center></a>          
+                    <a href="menupages/productos.html"><center><h2><b>Productos</b></h2></center></a>
+                    <p><center>
+                        Nuestros productos son de la más alta calidad tanto en marcas nacionales como importados de todas partes del mundo.
+                    </center></p>
+                    <p>
+                        <center><a class="btn btn-success" href="menupages/productos.html">Leer más...</a></center>
+                    </p>
+                </div>      
+                <div class="col-md-4">
+                    <a href="menupages/servicios.html"><center><img class="img-fluid" src="recursos/serviciosacceso.jpg" frameborder="1" style="border:5px double blueviolet;"></center></a>
+                    <a href="menupages/servicios.html"><center><h2><b>Servicios</b></h2></center></a>
+                    <p><center>
+                        Nuestros servicios están dirigdos a ayudarte a resolver cualquier necesidad o inconveniente que tengas en la implementación de tu proyecto.
+                    </center></p>
+                    <p>
+                        <center><a class="btn btn-success" href="menupages/servicios.html">Leer más...</a></center>
+                    </p>
+                </div>    
+                <div class="col-md-4">
+                    <a href="menupages/novedades.html"><center><img class="img-fluid" src="recursos/novedadesacceso.jpg" frameborder="1" style="border:5px double black;"></center></a>
+                    <a href="menupages/novedades.html"><center><h2><b>Novedades</b></h2></center></a>
+                    <p><center>
+                        Siempre estamos pensando en ti, por eso actualizamos constantemente nuestro stock para que puedas contar con lo último en tecnología.
+                    </center></p>
+                    <p>
+                        <center><a class="btn btn-success" href="menupages/novedades.html">Leer más...</a></center>
+                    </p>
+                </div>       
+                <div class="col-md-4">
+                    <a href="menupages/cotizacion.html"><center><img class="img-fluid" src="recursos/cotizacionacceso.jpg" frameborder="1" style="border:5px double orange;"></center></a>
+                    <a href="menupages/cotizacion.html"><center><h2><b>Cotización</b></h2></center></a>
+                    <p><center>
+                        Para que no te detengas jamás a pesar de los inconvenientes, hemos implementado la cotización en línea con grandes descuentos.
+                    </center></p>
+                    <p>
+                        <center><a class="btn btn-success" href="menupages/cotizacion.html">Leer más...</a></center>
+                    </p>
+                </div>       
+                <div class="col-md-4">
+                    <a href="menupages/clientes.html"><center><img class="img-fluid" src="recursos/clientesacceso.jpg" frameborder="1" style="border:5px double brown;"></center></a>
+                    <a href="menupages/clientes.html"><center><h2><b>Clientes</b></h2></center></a>
+                    <p><center>
+                        A lo largo del tiempo hemos desarrollado una relación de confianza con nuestros clientes, basados en la calidad de nuestros servicios.
+                    </center></p>
+                    <p>
+                        <center><a class="btn btn-success" href="menupages/clientes.html">Leer más...</a></center>
+                    </p>
+                </div>
+                <div class="col-md-4"></div>     
+                <div class="col-md-4">
+                    <a href="menupages/contactenos.html"><center><img class="img-fluid" src="recursos/contactenosacceso.jpg" frameborder="1" style="border:5px double green;"></center></a>
+                    <a href="menupages/contactenos.html"><center><h2><b>Contáctenos</b></h2></center></a>
+                    <p><center>
+                        Si lo que buscas es un equipo que siempre estará pensando en ti, puedes contactarnos con total confianza por diferentes medios.
+                    </center></p>
+                    <p>
+                        <center><a class="btn btn-success" href="menupages/contactenos.html">Leer más...</a></center>
+                    </p>
+                </div>
+            </div>
+        </div><br>
+
+       
+        <img src="recursos/imagenfooter.jpg" width="100%" alt="Piepagina">
+        
+
+        <div class="container"><br>
+            <footer>
+                <p>&copy; <script type="text/javascript">DateTime.Now.Year</script> - Gestión Logística AT</p>
+            </footer>
+        </div>
+    </body>
+</html>
